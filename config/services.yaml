@@ -29,3 +29,10 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+    turbolinks_service:
+        class: Helthe\Component\Turbolinks\Turbolinks
+
+    turbolinks_listener:
+        class: Helthe\Component\Turbolinks\EventListener\TurbolinksListener
+        arguments:
+            $turbolinks: "@turbolinks_service"

@@ -1,0 +1,11 @@
+version: "3"
+services:
+    db:
+        image: postgres:13
+        environment:
+            POSTGRES_USER: cooking-recipes
+            POSTGRES_PASSWORD: local
+    adminer:
+        image: adminer
+        ports:
+            - 8080:8080
